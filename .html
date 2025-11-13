@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Echo Africa | Recruitment & Travel Solutions</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- Global Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #f9fbfc;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(to right, #f6a800, #005f73);
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  margin-right: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero a {
+  background-color: #f6a800;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background-color: #e89a00;
+}
+
+/* ---------- Services Section ---------- */
+section#services {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+section#services h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #005f73;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.service {
+  background-color: #f1f1f1;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  color: #f6a800;
+}
+
+.service p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ---------- About Section ---------- */
+section#about {
+  padding: 80px 20px;
+  background-color: #e9f3f4;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #005f73;
+}
+
+#about .content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ---------- Contact Section ---------- */
+section#contact {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #005f73;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #f6a800;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #f6a800;
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:768px) {
+  header .container {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Echo Africa Logo">
+      <h1>Echo Africa</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Echo Africa Recruitment Agency</h1>
+    <p>“Your Demand Is Our Service”</p>
+    <a href="#services">Explore Our Services</a>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="container services-grid">
+
+    <div class="service">
+      <h3>Professional Staffing (Jobs)</h3>
+      <p>Recruitment and placement of skilled professionals across industries — including hospitality, tourism, administration, and event staffing.</p>
+    </div>
+
+    <div class="service">
+      <h3>Tour Allocations</h3>
+      <p>Organizing local and international tours, arranging itineraries, accommodation, and experienced guides for groups and individuals.</p>
+    </div>
+
+    <div class="service">
+      <h3>Buses for Hire</h3>
+      <p>Comfortable buses available for schools, corporate trips, weddings, and excursions — driven by professionals.</p>
+    </div>
+
+    <div class="service">
+      <h3>Tourism Vehicles</h3>
+      <p>4x4 safari vans and luxury cars for hire — ideal for game drives, safaris, and airport transfers.</p>
+    </div>
+
+    <div class="service">
+      <h3>Corporate Training</h3>
+      <p>Professional development programs in leadership, communication, and customer service for growing businesses.</p>
+    </div>
+
+    <div class="service">
+      <h3>Party MCs</h3>
+      <p>Energetic and engaging masters of ceremony for weddings, introductions, and corporate events — bilingual MCs available.</p>
+    </div>
+
+    <div class="service">
+      <h3>Accommodation for Hire</h3>
+      <p>Affordable and quality lodging arrangements for travelers, teams, and guests through trusted hotel partners.</p>
+    </div>
+
+    <div class="service">
+      <h3>Photography & Videography</h3>
+      <p>Professional event coverage, documentaries, and promotional content — with high-quality editing and delivery.</p>
+    </div>
+
+    <div class="service">
+      <h3>Party Places</h3>
+      <p>Event venue booking, decoration, and full coordination for private, social, or corporate functions.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container content">
+    <h2>About Echo Africa</h2>
+    <p>
+      Echo Africa is a leading recruitment and travel solutions agency based in Uganda.  
+      We are committed to connecting opportunities, supporting local talent, and promoting tourism excellence across Africa.  
+      Our goal is to serve with integrity, innovation, and reliability — ensuring every client’s demand becomes our service.
+    </p>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <div class="contact-info">
+      <p>📞 Tel: <a href="tel:+256767198596">0767 198 596</a> / <a href="tel:+256704437213">0704 437 213</a></p>
+      <p>🌐 Website: <a href="https://www.echoafrica.com" target="_blank">www.echoafrica.com</a></p>
+      <p>✉️ Email: <a href="mailto:echoproject26@gmail.com">echoproject26@gmail.com</a></p>
+      <p>📍 Location: Kampala, Uganda</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© <span id="year"></span> Echo Africa — All Rights Reserved.</p>
+  <p><a href="mailto:echoproject26@gmail.com">Contact Us</a></p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
